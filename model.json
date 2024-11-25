@@ -1,5 +1,5 @@
 { 
-    "positive_prompt": "This photograph captures a young Asian woman with fair skin, sitting on a large rock beside a sandy beach. She has straight black hair pulled back and is wearing a colorful one-piece swimsuit in blue, orange, and white with a frilly detail at the hips. Her swimsuit accentuates her medium-sized breasts and slim physique. She is smiling and looking up at the camera. The background features lush green foliage and a sandy beach with scattered rocks. She is wearing white Adidas sneakers.",
+    "positive_prompt": "A photograph captures a curly-haired, light brown dog playfully splashing in the ocean. The dog, with wet fur, is mid-pounce, creating dynamic water splashes around it. The background features a vibrant sunset sky, transitioning from deep blue to soft orange and pink hues. The ocean water is clear and turquoise, adding a serene contrast to the energetic foreground. The image exudes a sense of joy and freedom, with the dog's expressive eyes and open mouth adding to the lively atmosphere.",
     "negative_prompt": "blurry",
     "seed": 0,
     "steps": 8,
