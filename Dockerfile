@@ -31,7 +31,7 @@ RUN pip install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+c
     git clone https://github.com/ltdrdata/ComfyUI-Manager /content/ComfyUI/custom_nodes/ComfyUI-Manager && \
     git clone https://github.com/asagi4/ComfyUI-Adaptive-Guidance /content/ComfyUI/custom_nodes/ComfyUI-Adaptive-Guidance && \
     git clone https://github.com/Jonseed/ComfyUI-Detail-Daemon /content/ComfyUI/custom_nodes/ComfyUI-Detail-Daemon && \
-    git clone https://github.com/EvilBT/ComfyUI_SLK_joy_caption_two /content/ComfyUI/custom_nodes/ComfyUI_SLK_joy_caption_two && \
+    git clone -b dev https://github.com/camenduru/ComfyUI_SLK_joy_caption_two /content/ComfyUI/custom_nodes/ComfyUI_SLK_joy_caption_two && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/consolidated_s6700.safetensors -d /content/ComfyUI/models/unet -o consolidated_s6700.safetensors && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/stable-diffusion-3.5-large/resolve/main/clip_g.safetensors -d /content/ComfyUI/models/clip -o clip_g.safetensors && \
     aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/t5xxl_fp16.safetensors -d /content/ComfyUI/models/clip -o t5xxl_fp16.safetensors && \
