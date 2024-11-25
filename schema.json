@@ -33,12 +33,22 @@
       "type": "string",
       "widget": "upload",
       "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
-      "property": "lora_url"
+      "property": "lora_url",
+      "visibleIf": {
+        "enable_custom_lora": [
+          true
+        ]
+      }
     },
     "lora_url": {
       "type": "string",
       "description": "Lora URL",
-      "widget": "textarea"
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_custom_lora": [
+          true
+        ]
+      }
     },
     "lora_strength_model": {
       "type": "number",
@@ -64,7 +74,12 @@
           ]
         }
       ],
-      "default": 1
+      "default": 1,
+      "visibleIf": {
+        "enable_custom_lora": [
+          true
+        ]
+      }
     },
     "lora_strength_clip": {
       "type": "number",
@@ -90,7 +105,12 @@
           ]
         }
       ],
-      "default": 1
+      "default": 1,
+      "visibleIf": {
+        "enable_custom_lora": [
+          true
+        ]
+      }
     },
     "seed": {
       "type": "integer",

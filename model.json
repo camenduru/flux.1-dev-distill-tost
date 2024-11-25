@@ -1,6 +1,6 @@
 { 
     "positive_prompt": "A photograph captures a curly-haired, light brown dog playfully splashing in the ocean. The dog, with wet fur, is mid-pounce, creating dynamic water splashes around it. The background features a vibrant sunset sky, transitioning from deep blue to soft orange and pink hues. The ocean water is clear and turquoise, adding a serene contrast to the energetic foreground. The image exudes a sense of joy and freedom, with the dog's expressive eyes and open mouth adding to the lively atmosphere.",
-    "negative_prompt": "blurry",
+    "negative_prompt": "blurry, sharp",
     "enable_custom_lora": false,
     "lora_url": "https://huggingface.co/TostAI/flux-1-dev-lora/resolve/main/8iiu0y.safetensors",
     "lora_strength_model": 1,
