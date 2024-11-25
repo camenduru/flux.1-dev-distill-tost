@@ -62,9 +62,57 @@
           ]
         },
         {
+          "description": "0.1",
+          "enum": [
+            0.1
+          ]
+        },
+        {
+          "description": "0.2",
+          "enum": [
+            0.2
+          ]
+        },
+        {
+          "description": "0.3",
+          "enum": [
+            0.3
+          ]
+        },
+        {
+          "description": "0.4",
+          "enum": [
+            0.4
+          ]
+        },
+        {
           "description": "0.5",
           "enum": [
             0.5
+          ]
+        },
+        {
+          "description": "0.6",
+          "enum": [
+            0.6
+          ]
+        },
+        {
+          "description": "0.7",
+          "enum": [
+            0.7
+          ]
+        },
+        {
+          "description": "0.8",
+          "enum": [
+            0.8
+          ]
+        },
+        {
+          "description": "0.9",
+          "enum": [
+            0.9
           ]
         },
         {
@@ -93,9 +141,57 @@
           ]
         },
         {
+          "description": "0.1",
+          "enum": [
+            0.1
+          ]
+        },
+        {
+          "description": "0.2",
+          "enum": [
+            0.2
+          ]
+        },
+        {
+          "description": "0.3",
+          "enum": [
+            0.3
+          ]
+        },
+        {
+          "description": "0.4",
+          "enum": [
+            0.4
+          ]
+        },
+        {
           "description": "0.5",
           "enum": [
             0.5
+          ]
+        },
+        {
+          "description": "0.6",
+          "enum": [
+            0.6
+          ]
+        },
+        {
+          "description": "0.7",
+          "enum": [
+            0.7
+          ]
+        },
+        {
+          "description": "0.8",
+          "enum": [
+            0.8
+          ]
+        },
+        {
+          "description": "0.9",
+          "enum": [
+            0.9
           ]
         },
         {
@@ -277,7 +373,7 @@
     "example": {
       "type": "string",
       "image1": "https://files.catbox.moe/flxrwn.png",
-      "image2": "https://files.catbox.moe/p7g1da.png",
+      "image2": "https://files.catbox.moe/n6fgoc.png",
       "image3": "https://files.catbox.moe/gbjr5b.png",
       "image4": "https://files.catbox.moe/gcxz5n.png",
       "widget": "example"

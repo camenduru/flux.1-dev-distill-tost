@@ -16,6 +16,8 @@ https://github.com/Jonseed/ComfyUI-Detail-Daemon <br />
 https://blackforestlabs.ai/
 
 ### 🖼 Output
+![flux 1-dev-distill-18038300258340697807-tost](https://github.com/user-attachments/assets/a3596ada-1726-4225-a620-1045d3d0b301)
+![flux 1-dev-distill-13697902223250802837-tost](https://github.com/user-attachments/assets/3a82a035-8031-46f8-a1e0-88d8cb5a6f2f)
 
 ### 🏢 Sponsor
 [https://runpod.io](https://runpod.io?ref=iqi9iy8y)
