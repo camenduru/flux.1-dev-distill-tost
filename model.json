@@ -1,6 +1,6 @@
 { 
     "positive_prompt": "This photograph captures a young Asian woman with fair skin, sitting on a large rock beside a sandy beach. She has straight black hair pulled back and is wearing a colorful one-piece swimsuit in blue, orange, and white with a frilly detail at the hips. Her swimsuit accentuates her medium-sized breasts and slim physique. She is smiling and looking up at the camera. The background features lush green foliage and a sandy beach with scattered rocks. She is wearing white Adidas sneakers.",
-    "negative_prompt": "(cartoon:0.5)",
+    "negative_prompt": "blurry",
     "seed": 0,
     "steps": 8,
     "cfg": 3.5,
@@ -8,6 +8,6 @@
     "scheduler": "normal",
     "max_shift": 1.15,
     "base_shift": 0.50,
-    "width": 1344,
-    "height": 768
+    "width": 1024,
+    "height": 1024
 }
