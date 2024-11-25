@@ -1,4 +1,8 @@
-{ 
+{
+    "enable_image_caption": false,
+    "input_image": "https://files.catbox.moe/1ba4mh.png",
+    "caption_type": "Descriptive",
+    "caption_length": "long",
     "positive_prompt": "detailed, realistic, masterpiece, uhd, 8k spaghettis",
     "negative_prompt": "sharp",
     "enable_custom_lora": false,

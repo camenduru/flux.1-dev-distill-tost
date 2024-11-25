@@ -15,10 +15,156 @@
       ],
       "widget": "readme"
     },
+    "enable_image_caption": {
+      "type": "boolean",
+      "description": "Enable Image Caption"
+    },
+    "upload1": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "input_image",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "input_image": {
+      "type": "string",
+      "description": "Image URL",
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "caption_type": {
+      "type": "string",
+      "widget": "select",
+      "description": "Caption Type",
+      "oneOf": [
+        {
+          "description": "Descriptive",
+          "enum": [
+            "Descriptive"
+          ]
+        },
+        {
+          "description": "Descriptive (Informal)",
+          "enum": [
+            "Descriptive (Informal)"
+          ]
+        },
+        {
+          "description": "Training Prompt",
+          "enum": [
+            "Training Prompt"
+          ]
+        },
+        {
+          "description": "MidJourney",
+          "enum": [
+            "MidJourney"
+          ]
+        },
+        {
+          "description": "Booru tag list",
+          "enum": [
+            "Booru tag list"
+          ]
+        },
+        {
+          "description": "Booru-like tag list",
+          "enum": [
+            "Booru-like tag list"
+          ]
+        },
+        {
+          "description": "Art Critic",
+          "enum": [
+            "Art Critic"
+          ]
+        },
+        {
+          "description": "Product Listing",
+          "enum": [
+            "Product Listing"
+          ]
+        },
+        {
+          "description": "Social Media Post",
+          "enum": [
+            "Social Media Post"
+          ]
+        }
+      ],
+      "default": "Descriptive",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
+    "caption_length": {
+      "type": "string",
+      "widget": "select",
+      "description": "Caption Length",
+      "oneOf": [
+        {
+          "description": "any",
+          "enum": [
+            "any"
+          ]
+        },
+        {
+          "description": "very short",
+          "enum": [
+            "very short"
+          ]
+        },
+        {
+          "description": "short",
+          "enum": [
+            "short"
+          ]
+        },
+        {
+          "description": "medium-length",
+          "enum": [
+            "medium-length"
+          ]
+        },
+        {
+          "description": "long",
+          "enum": [
+            "long"
+          ]
+        },
+        {
+          "description": "very long",
+          "enum": [
+            "very long"
+          ]
+        }
+      ],
+      "default": "long",
+      "visibleIf": {
+        "enable_image_caption": [
+          true
+        ]
+      }
+    },
     "positive_prompt": {
       "type": "string",
       "description": "Positive Prompt",
-      "widget": "textarea"
+      "widget": "textarea",
+      "visibleIf": {
+        "enable_image_caption": [
+          false
+        ]
+      }
     },
     "negative_prompt": {
       "type": "string",
@@ -29,7 +175,7 @@
       "type": "boolean",
       "description": "Enable Custom Lora"
     },
-    "upload": {
+    "upload2": {
       "type": "string",
       "widget": "upload",
       "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",

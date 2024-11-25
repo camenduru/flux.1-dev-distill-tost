@@ -10,6 +10,7 @@ from comfy_extras import nodes_flux, nodes_model_advanced, nodes_custom_sampler,
 
 load_custom_node("/content/ComfyUI/custom_nodes/ComfyUI-Adaptive-Guidance")
 load_custom_node("/content/ComfyUI/custom_nodes/ComfyUI-Detail-Daemon")
+load_custom_node("/content/ComfyUI/custom_nodes/ComfyUI_SLK_joy_caption_two")
 
 UNETLoader = NODE_CLASS_MAPPINGS["UNETLoader"]()
 TripleCLIPLoader = nodes_sd3.NODE_CLASS_MAPPINGS["TripleCLIPLoader"]()
@@ -18,6 +19,8 @@ CLIPVisionLoader = NODE_CLASS_MAPPINGS["CLIPVisionLoader"]()
 LoadImage = NODE_CLASS_MAPPINGS["LoadImage"]()
 StyleModelLoader =  NODE_CLASS_MAPPINGS["StyleModelLoader"]()
 LoraLoader = NODE_CLASS_MAPPINGS["LoraLoader"]()
+Joy_caption_two_load = NODE_CLASS_MAPPINGS["Joy_caption_two_load"]()
+Joy_caption_two = NODE_CLASS_MAPPINGS["Joy_caption_two"]()
 
 ModelSamplingFlux = nodes_model_advanced.NODE_CLASS_MAPPINGS["ModelSamplingFlux"]()
 CLIPTextEncode = NODE_CLASS_MAPPINGS["CLIPTextEncode"]()
@@ -38,6 +41,7 @@ with torch.inference_mode():
     unet3, clip3 = LoraLoader.load_lora(unet2, clip2, "xlabs_flux_realism_lora_comfui.safetensors", 0.70, 0.70)
     unet4, clip4 = LoraLoader.load_lora(unet3, clip3, "detailed_v2_flux_ntc.safetensors", 0.70, 0.70)
     vae = VAELoader.load_vae("ae.sft")[0]
+    joy_two_pipeline = Joy_caption_two_load.generate("Llama-3.1-8B-Lexi-Uncensored-V2")[0]
 
 def download_file(url, save_dir, file_name):
     os.makedirs(save_dir, exist_ok=True)
@@ -54,7 +58,17 @@ def download_file(url, save_dir, file_name):
 def generate(input):
     values = input["input"]
 
-    positive_prompt = values['positive_prompt']
+    enable_image_caption = values['enable_image_caption']
+    if enable_image_caption:
+        input_image = values['input_image']
+        input_image = download_file(url=input_image, save_dir='/content/ComfyUI/input', file_name='input_image')
+        input_image = LoadImage.load_image(input_image)[0]
+        caption_type = values['caption_type']
+        caption_length = values['caption_length']
+        positive_prompt = Joy_caption_two.generate(joy_two_pipeline, input_image, caption_type, caption_length, low_vram=False)[0]
+        print(positive_prompt)
+    else:
+        positive_prompt = values['positive_prompt']
     negative_prompt = values['negative_prompt']
     enable_custom_lora = values['enable_custom_lora']
     if enable_custom_lora:
