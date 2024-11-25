@@ -64,6 +64,8 @@ def generate(input):
         lora_strength_model = values['lora_strength_model']
         lora_strength_clip = values['lora_strength_clip']
         unet5, clip5 = LoraLoader.load_lora(unet4, clip4, lora_file, lora_strength_model, lora_strength_clip)
+        if os.path.exists('/content/ComfyUI/models/loras/lora_file.safetensors'):
+            os.remove('/content/ComfyUI/models/loras/lora_file.safetensors')
     else:
         unet5 = unet4
         clip5 = clip4
