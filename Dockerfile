@@ -26,7 +26,7 @@ USER camenduru
 RUN pip install torch==2.5.1+cu124 torchvision==0.20.1+cu124 torchaudio==2.5.1+cu124 torchtext==0.18.0 torchdata==0.8.0 --extra-index-url https://download.pytorch.org/whl/cu124 && \
     pip install xformers==0.0.28.post3 && \
     pip install opencv-python imageio imageio-ffmpeg ffmpeg-python av runpod && \
-    pip install torchsde einops diffusers transformers accelerate peft timm kornia scikit-image && \
+    pip install torchsde einops diffusers transformers accelerate peft timm kornia scikit-image matplotlib && \
     git clone https://github.com/comfyanonymous/ComfyUI /content/ComfyUI && \
     git clone https://github.com/ltdrdata/ComfyUI-Manager /content/ComfyUI/custom_nodes/ComfyUI-Manager && \
     git clone https://github.com/asagi4/ComfyUI-Adaptive-Guidance /content/ComfyUI/custom_nodes/ComfyUI-Adaptive-Guidance && \
