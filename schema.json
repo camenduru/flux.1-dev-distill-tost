@@ -25,6 +25,73 @@
       "description": "Negative Prompt",
       "widget": "textarea"
     },
+    "enable_custom_lora": {
+      "type": "boolean",
+      "description": "Enable Custom Lora"
+    },
+    "upload": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "lora_url"
+    },
+    "lora_url": {
+      "type": "string",
+      "description": "Lora URL",
+      "widget": "textarea"
+    },
+    "lora_strength_model": {
+      "type": "number",
+      "widget": "select",
+      "description": "Lora Strength Model",
+      "oneOf": [
+        {
+          "description": "0",
+          "enum": [
+            0
+          ]
+        },
+        {
+          "description": "0.5",
+          "enum": [
+            0.5
+          ]
+        },
+        {
+          "description": "1",
+          "enum": [
+            1
+          ]
+        }
+      ],
+      "default": 1
+    },
+    "lora_strength_clip": {
+      "type": "number",
+      "widget": "select",
+      "description": "Lora Strength Clip",
+      "oneOf": [
+        {
+          "description": "0",
+          "enum": [
+            0
+          ]
+        },
+        {
+          "description": "0.5",
+          "enum": [
+            0.5
+          ]
+        },
+        {
+          "description": "1",
+          "enum": [
+            1
+          ]
+        }
+      ],
+      "default": 1
+    },
     "seed": {
       "type": "integer",
       "description": "Seed (if 0 random)"

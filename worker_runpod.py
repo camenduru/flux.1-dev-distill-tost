@@ -56,6 +56,17 @@ def generate(input):
 
     positive_prompt = values['positive_prompt']
     negative_prompt = values['negative_prompt']
+    enable_custom_lora = values['enable_custom_lora']
+    if enable_custom_lora:
+        lora_url = values['lora_url']
+        lora_file = download_file(url=lora_url, save_dir='/content/ComfyUI/models/loras', file_name='lora_file')
+        lora_file = os.path.basename(lora_file)
+        lora_strength_model = values['lora_strength_model']
+        lora_strength_clip = values['lora_strength_clip']
+        unet5, clip5 = LoraLoader.load_lora(unet4, clip4, lora_file, lora_strength_model, lora_strength_clip)
+    else:
+        unet5 = unet4
+        clip5 = clip4
     seed = values['seed']
     steps = values['steps']
     cfg = values['cfg']
@@ -71,9 +82,9 @@ def generate(input):
         seed = random.randint(0, 18446744073709551615)
     print(seed)
 
-    positive = CLIPTextEncode.encode(clip4, positive_prompt)[0]
-    negative = CLIPTextEncode.encode(clip4, negative_prompt)[0]
-    unet_flux = ModelSamplingFlux.patch(unet4, max_shift, base_shift, width, height)[0]
+    positive = CLIPTextEncode.encode(clip5, positive_prompt)[0]
+    negative = CLIPTextEncode.encode(clip5, negative_prompt)[0]
+    unet_flux = ModelSamplingFlux.patch(unet5, max_shift, base_shift, width, height)[0]
     noise = RandomNoise.get_noise(seed)[0]
     guider = AdaptiveGuidance.get_guider(unet_flux, positive, negative, 1.0, cfg, uncond_zero_scale=0.0, cfg_start_pct=0.0)[0]
     sampler = KSamplerSelect.get_sampler(sampler_name)[0]
