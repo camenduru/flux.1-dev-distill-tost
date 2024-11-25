@@ -35,19 +35,19 @@
       "description": "Steps",
       "oneOf": [
         {
-          "description": "4",
-          "enum": [
-            4
-          ]
-        },
-        {
           "description": "8",
           "enum": [
             8
           ]
         },
         {
-          "description": "16",
+          "description": "10",
+          "enum": [
+            8
+          ]
+        },
+        {
+          "description": "12",
           "enum": [
             16
           ]
@@ -191,7 +191,7 @@
       "type": "string",
       "image1": "https://files.catbox.moe/flxrwn.png",
       "image2": "https://files.catbox.moe/p7g1da.png",
-      "image3": "https://files.catbox.moe/omvbh7.png",
+      "image3": "https://files.catbox.moe/gbjr5b.png",
       "image4": "https://files.catbox.moe/gcxz5n.png",
       "widget": "example"
     }
