@@ -1,6 +1,6 @@
 {
-  "last_node_id": 377,
-  "last_link_id": 688,
+  "last_node_id": 380,
+  "last_link_id": 690,
   "nodes": [
     {
       "id": 363,
@@ -14,7 +14,7 @@
         106
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -64,7 +64,7 @@
         126
       ],
       "flags": {},
-      "order": 9,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -154,7 +154,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -235,7 +235,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 20,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -305,7 +305,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 21,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -450,7 +450,7 @@
         126
       ],
       "flags": {},
-      "order": 11,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -503,7 +503,7 @@
         126
       ],
       "flags": {},
-      "order": 12,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -556,7 +556,7 @@
         126
       ],
       "flags": {},
-      "order": 13,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -611,7 +611,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 19,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -664,7 +664,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 15,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -724,7 +724,7 @@
         106
       ],
       "flags": {},
-      "order": 18,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -801,7 +801,7 @@
         126
       ],
       "flags": {},
-      "order": 14,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -857,7 +857,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 16,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -906,7 +906,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 17,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -980,7 +980,7 @@
         508.3142395019531
       ],
       "flags": {},
-      "order": 22,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1027,6 +1027,117 @@
       },
       "widgets_values": [
         "A close-up photograph of ExtraEmily camper riding a elephant in the forest at golden hour"
+      ]
+    },
+    {
+      "id": 378,
+      "type": "Joy_caption_two_load",
+      "pos": [
+        854.9110717773438,
+        -790.2492065429688
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "JoyTwoPipeline",
+          "type": "JoyTwoPipeline",
+          "links": [
+            689
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Joy_caption_two_load"
+      },
+      "widgets_values": [
+        "Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2"
+      ]
+    },
+    {
+      "id": 379,
+      "type": "Joy_caption_two",
+      "pos": [
+        1284.4930419921875,
+        -791.3665161132812
+      ],
+      "size": [
+        315,
+        126
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "joy_two_pipeline",
+          "type": "JoyTwoPipeline",
+          "link": 689
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 690
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Joy_caption_two"
+      },
+      "widgets_values": [
+        "Descriptive",
+        "long",
+        false
+      ]
+    },
+    {
+      "id": 380,
+      "type": "LoadImage",
+      "pos": [
+        846.1755981445312,
+        -686.3655395507812
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            690
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "1.png",
+        "image"
       ]
     }
   ],
@@ -1350,16 +1461,32 @@
       118,
       0,
       "MODEL"
+    ],
+    [
+      689,
+      378,
+      0,
+      379,
+      0,
+      "JoyTwoPipeline"
+    ],
+    [
+      690,
+      380,
+      0,
+      379,
+      1,
+      "IMAGE"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9229599817706476,
+      "scale": 1.1167815779424841,
       "offset": [
-        -335.3334210983586,
-        1638.4967726119494
+        -393.65353565115674,
+        1427.9847073856758
       ]
     }
   },
