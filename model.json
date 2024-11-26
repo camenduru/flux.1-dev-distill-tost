@@ -3,6 +3,7 @@
     "input_image": "https://files.catbox.moe/ik4jpj.jpg",
     "caption_type": "Descriptive",
     "caption_length": "long",
+    "low_vram": true,
     "positive_prompt": "detailed, realistic, masterpiece, uhd, 8k spaghettis",
     "negative_prompt": "sharp",
     "enable_custom_lora": false,

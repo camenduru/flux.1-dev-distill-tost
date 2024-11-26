@@ -156,6 +156,11 @@
         ]
       }
     },
+    "low_vram": {
+      "type": "boolean",
+      "description": "Low VRAM",
+      "widget": "hidden"
+    },
     "positive_prompt": {
       "type": "string",
       "description": "Positive Prompt",

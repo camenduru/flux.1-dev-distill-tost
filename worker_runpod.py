@@ -65,7 +65,8 @@ def generate(input):
         input_image = LoadImage.load_image(input_image)[0]
         caption_type = values['caption_type']
         caption_length = values['caption_length']
-        positive_prompt = Joy_caption_two.generate(joy_two_pipeline, input_image, caption_type, caption_length, low_vram=False)[0]
+        low_vram = values['low_vram']
+        positive_prompt = Joy_caption_two.generate(joy_two_pipeline, input_image, caption_type, caption_length, low_vram)[0]
         print(positive_prompt)
     else:
         positive_prompt = values['positive_prompt']
